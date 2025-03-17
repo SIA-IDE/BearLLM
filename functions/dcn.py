@@ -17,8 +17,8 @@ def normalize(data: np.ndarray):
 
 
 def dcn(data: np.ndarray, length=24000):
-    data = pad_or_cut(data, length)
     data = dct(data)
+    data = pad_or_cut(data, length)
     data = normalize(data)
     return data
 
